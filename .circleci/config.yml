@@ -28,10 +28,9 @@ jobs: # For running a series of steps that run a series of commands.
           name: Back-End Install
           command: |
             npm run api:install
-       - run:
-          name: Front-End Lint
+      - run:
+          name: Front-End lint
           command: |
-           
             npm run frontend:lint
       - run:
           name: Front-End Build
