@@ -24,12 +24,12 @@ jobs:
             echo "NPM --version" 
             echo $(npm --version)
             npm run frontend:install
-      # TODO: Install dependencies in the the backend API          
+      # TODO: Install dependencies in the the api API          
       - run:
           name: Install API Dependencies
           command: |
-           echo "TODO: Install dependencies in the the backend API  "
-           npm run backend:install
+           echo "TODO: Install dependencies in the the api API  "
+           npm run api:install
       # TODO: Lint the frontend
       - run:
           name: Front-End Lint
@@ -42,12 +42,12 @@ jobs:
           command: |
             echo "TODO: Build the frontend app"
             npm run frontend:build
-      # TODO: Build the backend API      
+      # TODO: Build the api API      
       - run:
           name: API Build
           command: |
-            echo "TODO: Build the backend API"
-            npm run backend:build
+            echo "TODO: Build the api API"
+            npm run api:build
   # deploy step will run only after manual approval
   deploy:
     docker:
@@ -64,7 +64,7 @@ jobs:
           # TODO: Install, build, deploy in both apps
           command: |
             echo "# TODO: Install, build, deploy in both apps"
-            npm run backend:deploy
+            npm run api:deploy
             npm run frontend:deploy
             
 workflows:
