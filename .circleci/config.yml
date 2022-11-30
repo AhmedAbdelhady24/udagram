@@ -31,10 +31,12 @@ jobs: # For running a series of steps that run a series of commands.
       - run:
           name: Front-End Build
           command: |
+            nvm install v14.15.0
             npm run frontend:build
       - run:
           name: Back-End Build
           command: |
+            nvm install v14.15.0
             npm run api:build
       
       - run:
