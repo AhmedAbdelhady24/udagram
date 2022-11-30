@@ -37,7 +37,10 @@ jobs: # For running a series of steps that run a series of commands.
           name: Back-End Build
           command: |
             nvm install v14.15.0
+            cd udagram/udagram-api/
             eb init udagram-api --platform node.js --region us-east-1
+            cd ..
+            cd ..
             npm run api:build
       
       - run:
