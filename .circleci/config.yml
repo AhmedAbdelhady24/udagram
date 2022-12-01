@@ -39,6 +39,8 @@ jobs:
             nvm install v14.15.0
             cd udagram/udagram-api/
             eb init udagram-api --platform node.js --region us-east-1
+            echo $PORT
+            echo {$PORT}
             eb setenv PORT=$PORT USERNAME=$USERNAME DB_PORT=$DB_PORT POSTGRES_DB=$POSTGRES_DB POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_USERNAME=$POSTGRES_USERNAME RDS_DIALECT = $RDS_DIALECT URL + $URL
             cd ..
             cd ..
